@@ -114,7 +114,7 @@ const ShowMovies = ({ movieDetails }) => {
 
             <Modal show={show} onHide={handleClose}>
               <Modal.Header closeButton>
-                <Modal.Title>{movieDetails?.show?.name}</Modal.Title>
+                <Modal.Title>{location.state?.show?.name}</Modal.Title>
               </Modal.Header>
               <Modal.Body>
                 <Form onSubmit={(e) => handleSubmit(e)}>
@@ -139,7 +139,7 @@ const ShowMovies = ({ movieDetails }) => {
                     <Form.Control
                       type="text"
                       name="movieName"
-                      defaultValue={movieDetails?.show?.name}
+                      defaultValue={location.state?.show?.name}
                       readOnly
                       required
                     />
